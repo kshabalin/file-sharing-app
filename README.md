@@ -15,12 +15,13 @@ java -jar demo-0.0.1-SNAPSHOT-spring-boot.jar --uploads.directory=you-files-dire
 ```
 
 ## Access
-Registration. This is the only public endpoint.
+### Registration. 
+This is the only public endpoint.
 ```
 POST http://localhost:8080/register
 ```
 
-List files
+### List files
 ```
 GET http://localhost:8080/api/file
 ```
@@ -37,9 +38,13 @@ JSON Response:
 }
 ```
 
-Upload files
+### Upload files
 ```
 POST http://localhost:8080/api/file
+```
+Consumes: 
+```
+multipart/form-data
 ```
 JSON Response:
 ```
@@ -48,7 +53,7 @@ JSON Response:
 }
 ```
 
-Download file associated with given id
+### Download file associated with given id
 ```
 GET http://localhost:8080/api/file/{id}
 ```
